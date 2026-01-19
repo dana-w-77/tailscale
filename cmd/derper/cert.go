@@ -153,7 +153,6 @@ func (m *manualCertManager) TLSConfig() *tls.Config {
 }
 
 func (m *manualCertManager) getCertificate(hi *tls.ClientHelloInfo) (*tls.Certificate, error) {
-	hi.ServerName = m.hostname
 	//if hi.ServerName != m.hostname && !m.noHostname {
 		//return nil, fmt.Errorf("cert mismatch with hostname: %q", hi.ServerName)
 	//}
